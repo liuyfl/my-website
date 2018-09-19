@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Services</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.4.0.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.word.css">
+	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<style type="text/css">
+		.graph-bg{
+			width:100%;
+			background:#47b29e;
+			background-image:url(images/path.png);
+			background-position: center;
+			background-size: cover;
+			min-height:500px;
+			display: table;
+			background-attachment: fixed;
+		}
+		.text-word{
+			padding:0px;
+			text-align:center;
+			font-size: 50px;
+			color:white;
+		}
+		.l-services-top-des{
+			font-size:24px;
+			color:white;
+			padding: 30px 0px 50px;
+			text-align: center;
+		}
+		.l-services-top-learnmore{
+			display: block;
+			margin:0 auto;
+			padding:10px 15px;
+			border:1px solid white;
+			border-radius:20px;
+			font-size:16px;
+			width:150px;
+			text-align: center;
+			color: white;
+			text-decoration: none;
+			-webkit-transition:all 0.3s linear;
+			-moz-transition:all 0.3s linear;
+			-o-transition:all 0.3s linear;
+			transition:all 0.3s linear;
+		}
+		.l-services-top-learnmore:hover{
+			background: rgba(255,255,255,0.3);
+			text-decoration: none;
+			color: white;
+		}
+		.l-services-title{
+			padding: 50px 0px 20px;
+			font-size:40px;
+			text-align: center;
+		}
+		.l-services-offer{
+			margin-top:50px;
+			margin-bottom: 30px;
+		}
+		.l-services-offter-title{
+			font-size:20px;
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+		.l-services-offter-content{
+			line-height: 24px;
+			padding-right: 20px;
+		}
+		.swiper-slide .slider-img{
+			min-height: 300px;
+			max-height: 500px;
+			-webkit-transition:all 0.3s linear;
+			-moz-transition:all 0.3s linear;
+			-o-transition:all 0.3s linear;
+			transition:all 0.3s linear;
+		}
+		.l-services-flash{
+			background: #575757;
+		}
+		.swiper-container{
+			padding:100px 0px 60px;
+		}
+		.swiper-slide{
+			cursor: pointer;
+			position: relative;
+			overflow: hidden;
+		}
+		.slider-content{
+			position: absolute;
+			background: rgba(6,6,6,0.4);
+			width:100%;
+			height: 100%;
+			top:0px;
+			/*-webkit-transition:all 0.3s linear;
+			-moz-transition:all 0.3s linear;
+			-o-transition:all 0.3s linear;
+			transition:all 0.3s linear;*/
+		}
+		.slider-btn{
+			display: block;
+			width:50px;
+			height: 50px;
+			border-radius: 25px;
+			background: white;
+			color:#93e8eb;
+			margin:0 auto;
+			text-align: center;
+			line-height: 50px;
+			margin-top:125px;
+			overflow: hidden;
+			opacity: 0;
+			-webkit-transition:all 0.3s linear;
+			-moz-transition:all 0.3s linear;
+			-o-transition:all 0.3s linear;
+			transition:all 0.3s linear;
+		}
+		.slider-btn .fa{
+			font-size:22px;
+			position: relative;
+			top:3px;
+			width:100%;
+			left:-100%;
+			-webkit-transition:all 0.3s linear;
+			-moz-transition:all 0.3s linear;
+			-o-transition:all 0.3s linear;
+			transition:all 0.3s linear;
+		}
+		.slider-btn:hover{
+			color:#93e8eb;
+		}
+		.swiper-slide:hover .slider-content{
+			background: rgba(6,6,6,0.2);
+		}
+		/*.swiper-slide:hover .slider-btn{
+			opacity: 1;
+		}
+		.swiper-slide:hover .fa{
+			left:0px;
+		}*/
+		.swiper-slide:hover .slider-img{
+			-webkit-transform:scale(1.2);
+			-moz-transform:scale(1.2);
+			-o-transform:scale(1.2);
+			transform:scale(1.2);
+		}
+		/*.slider-des{
+			text-align: center;
+			color:#93e8eb;
+			font-size:20px;
+			padding-top:10px;
+		}*/
+		.l-services-joinus-title{
+			text-align: center;
+			font-size:38px;
+			color:#93e8eb;
+			margin:50px 0px;
+		}
+		.l-services-joinus-input{
+			padding:15px 0px;
+		}
+		.l-services-joinus-input input{
+			width:100%;
+			border:0px;
+			outline:none;
+			color:#333;
+			border-bottom: 1px solid #d3d3d3;
+			padding:0 5px;
+		}
+		.l-services-joinus-input input:focus{
+			border-bottom: 1px solid #93e8eb;
+		}
+		.l-services-joinus-submit{
+			text-align: center;
+		}
+		#submit{
+			background: #0e9297;
+			border:0px;
+			padding:10px 30px;
+			font-size: 16px;
+			margin-top: 40px;
+			color: #fff;
+			border-radius: 10px;
+			position: relative;
+			width: 120px;
+			text-align: center;
+			margin:30px auto 0px;
+			height: 40px;
+			cursor: pointer;
+		}
+		#submit::before{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			content: '';
+			top:0px;
+			left: 0px;
+			background: #40c6cb;
+			-webkit-transition:all 0.3s linear;
+			-moz-transition:all 0.3s linear;
+			-o-transition:all 0.3s linear;
+			transition:all 0.3s linear;
+			-webkit-transform:scale(0);
+			-moz-transform:scale(0);
+			-o-transform:scale(0);
+			transform:scale(0);
+			-webkit-transform-origin:center;
+			-moz-transform-origin:center;
+			-o-transform-origin:center;
+			transform-origin:center;
+			border-radius: 10px;
+		}
+		#submit::after{
+			content:attr(data-value);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top:0px;
+			left:0px;
+			line-height: 40px;
+		}
+		#submit:hover::before{
+			-webkit-transform:scale(1);
+			-moz-transform:scale(1);
+			-o-transform:scale(1);
+			transform:scale(1);
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<!-- navigation -->
+		<div class="content header-banner">
+			<div class="container" style="position:relative;">
+				<div class="logo col-xs-4">logo</div>
+				<div class="float-menu">
+					<nav class="navigation-menu">
+						<ul class="menu-main-navigation">
+							<li class="menu-item">
+								<a class="menu-item-link" href="">Home</a>
+							</li>
+							<li class="menu-item has-sub">
+								<a class="menu-item-link" href="">Features</a>
+								<ul class="menu-item-sub-menu">
+									<li class="sub-menu-item"><a class="sub-menu-item-link">Feature1</a></li>
+									<li class="sub-menu-item"><a class="sub-menu-item-link">Feature2</a></li>
+									<li class="sub-menu-item"><a class="sub-menu-item-link">Feature3</a></li>
+									<li class="sub-menu-item"><a class="sub-menu-item-link">Feature4</a></li>
+									<li class="sub-menu-item"><a class="sub-menu-item-link">Feature5</a></li>
+								</ul>
+							</li>
+							<li class="menu-item">
+								<a class="menu-item-link" href="">Services</a>
+							</li>
+							<li class="menu-item">
+								<a class="menu-item-link" href="">Blog</a>
+							</li>
+							<li class="menu-item">
+								<a class="menu-item-link" href="">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div class="graph-bg">
+			<div class="container" style="display:table-cell;vertical-align:middle;">
+				<div class="text-word">
+					I want to 
+					<span class="wordlist">
+						<span class="word-group">enducate</span>
+						<span class="word-group">engage</span>
+						<span class="word-group">grow</span>
+					</span>
+					 my visitors
+				</div>
+				<div class="l-services-top-des">Grow your website with tools trusted by over 15 million sites.</div>
+				<a href="" class="l-services-top-learnmore">Learn More</a>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="l-services-section">
+			<div class="container">
+				<div class="l-services-title">OUR SERVICES</div>
+				<div class="col-xs-6 col-sm-4 l-services-offer">
+					<div class="l-services-offter-title">Digital Strategy</div>
+					<div class="l-services-offter-content">
+						Lorem ipsum dolor sit amet isse potenti. Vesquam ante aliquet lacusemper elit. Cras neque nulla, convallis non commodo et, euismod nonsese. At vero eos et accus amus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non.
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 l-services-offer">
+					<div class="l-services-offter-title">Product Design</div>
+					<div class="l-services-offter-content">
+						Lorem ipsum dolor sit amet isse potenti. Vesquam ante aliquet lacusemper elit. Cras neque nulla, convallis non commodo et, euismod nonsese. At vero eos et accus amus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non.
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 l-services-offer">
+					<div class="l-services-offter-title">Responsive Layout</div>
+					<div class="l-services-offter-content">
+						Lorem ipsum dolor sit amet isse potenti. Vesquam ante aliquet lacusemper elit. Cras neque nulla, convallis non commodo et, euismod nonsese. At vero eos et accus amus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non.
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 l-services-offer">
+					<div class="l-services-offter-title">Powerful Performance</div>
+					<div class="l-services-offter-content">
+						Lorem ipsum dolor sit amet isse potenti. Vesquam ante aliquet lacusemper elit. Cras neque nulla, convallis non commodo et, euismod nonsese. At vero eos et accus amus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non.
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 l-services-offer">
+					<div class="l-services-offter-title">Parallax Support</div>
+					<div class="l-services-offter-content">
+						Lorem ipsum dolor sit amet isse potenti. Vesquam ante aliquet lacusemper elit. Cras neque nulla, convallis non commodo et, euismod nonsese. At vero eos et accus amus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non.
+					</div>
+				</div>
+				<div class="col-xs-6 col-sm-4 l-services-offer">
+					<div class="l-services-offter-title">Branding & Logo</div>
+					<div class="l-services-offter-content">
+						Lorem ipsum dolor sit amet isse potenti. Vesquam ante aliquet lacusemper elit. Cras neque nulla, convallis non commodo et, euismod nonsese. At vero eos et accus amus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non.
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="l-services-flash">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="slider-img" style="background-image:url(images/10.jpg)"></div>
+						<div class="slider-content">
+							<a href="" class="slider-btn"><i class="fa fa-arrow-right"></i></a>
+							<!-- <div class="slider-des">The food</div> -->
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slider-img" style="background-image:url(images/11.jpg)"></div>
+						<div class="slider-content">
+							<a href="" class="slider-btn"><i class="fa fa-arrow-right"></i></a>
+							<!-- <div class="slider-des">The food</div> -->
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slider-img" style="background-image:url(images/12.jpg)"></div>
+						<div class="slider-content">
+							<a href="" class="slider-btn"><i class="fa fa-arrow-right"></i></a>
+							<!-- <div class="slider-des">The food</div> -->
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slider-img" style="background-image:url(images/13.jpg)"></div>
+						<div class="slider-content">
+							<a href="" class="slider-btn"><i class="fa fa-arrow-right"></i></a>
+							<!-- <div class="slider-des">The food</div> -->
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slider-img" style="background-image:url(images/15.jpg)"></div>
+						<div class="slider-content">
+							<a href="" class="slider-btn"><i class="fa fa-arrow-right"></i></a>
+							<!-- <div class="slider-des">The food</div> -->
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slider-img" style="background-image:url(images/16.jpg)"></div>
+						<div class="slider-content">
+							<a href="" class="slider-btn"><i class="fa fa-arrow-right"></i></a>
+							<!-- <div class="slider-des">The food</div> -->
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slider-img" style="background-image:url(images/17.jpg)"></div>
+						<div class="slider-content">
+							<a href="" class="slider-btn"><i class="fa fa-arrow-right"></i></a>
+							<!-- <div class="slider-des">The food</div> -->
+						</div>
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+				<div class="swiper-button-prev swiper-button-white"></div>
+				<div class="swiper-button-next swiper-button-white"></div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="l-services-joinus-title">Join US</div>
+			<div class="col-xs-4 col-xs-offset-4 l-services-joinus-input">
+				<input type="text" id="name" placeholder="Name">
+			</div>
+			<div class="col-xs-4 col-xs-offset-4 l-services-joinus-input">
+				<input type="text" id="Email" placeholder="Email">
+			</div>
+			<div class="col-xs-4 col-xs-offset-4 l-services-joinus-input">
+				<input type="text" id="msg" placeholder="Your message">
+			</div>
+			<div class="col-xs-4 col-xs-offset-4 l-services-joinus-submit">
+				<div type="submit"  id="submit" data-value="Submit"></div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container" style="padding-top:50px;">
+			<div class="col-xs-4 l-footer-left">
+				<div class="l-footer-left-inner-wrap">
+					<div class="l-footer-left-logo">TestLogo</div>
+					<div class="l-footer-left-content">Lorem ipsum dolor sit met, consectetur adipiscing elit. Integer imperdiet iaculis ipsum aliquet ultricies. Sed a tincidun. </div>
+					<div class="l-footer-left-copyright">copyright 2016 TestLogo</div>
+				</div>
+			</div>
+			<div class="col-xs-4 l-footer-center">
+				<div class="l-footer-center-inner-wrap">
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">Features</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">Blog</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-4 l-footer-right">
+				<div class="l-footer-right-innner-wrap">
+					<div class='l-footer-right-title'>Get in touch</div>
+					<div class="l-footer-right-addr">Xiamen FuJian 361008 Xiamen FuJian 361008,China<br>Tel: 1234567890</div>
+					<div class="l-footer-right-share">
+						<ul>
+							<li class="twitter"><a href=""><i class="fa fa-twitter"></i><i class="fa fa-twitter"></i></a></li>
+							<li class="facebook"><a href=""><i class="fa fa-facebook"></i><i class="fa fa-facebook"></i></a></li>
+							<li class="linkedin"><a href=""><i class="fa fa-linkedin"></i><i class="fa fa-linkedin"></i></a></li>
+							<li class="weibo"><a href=""><i class="fa fa-weibo"></i><i class="fa fa-weibo"></i></a></li>
+							<li class="weixin"><a href=""><i class="fa fa-weixin"></i><i class="fa fa-weixin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/swiper-3.4.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.word.js"></script>
+	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.wordlist').wordslist({
+				'covercolor':'rgba(255,255,255,0.3)'
+			});
+			var myswiper=new Swiper('.swiper-container',{
+				loop:true,
+				pagination:'.swiper-pagination',
+				paginationClickable:true,
+				prevButton:'.swiper-button-prev',
+				nextButton:'.swiper-button-next',
+				autoplay:3000,
+				speed:1000,
+				slidesPerView:4,
+				slidesOffsetBefore:-50,
+				slidesOffsetAfter:-250,
+				centeredSlides:true,
+			});
+			function resizeswiper(){
+				if(window.innerWidth>=1200)
+				{
+					myswiper.params.slidesPerView=4;
+					myswiper.params.slidesOffsetBefore=-50;
+					myswiper.params.slidesOffsetAfter=-250;
+				}
+				else if(window.innerWidth<1200&&window.innerWidth>=1000)
+				{
+					myswiper.params.slidesPerView=3;
+					myswiper.params.slidesOffsetBefore=-250;
+					myswiper.params.slidesOffsetAfter=-250;
+				}
+				else if(window.innerWidth<1000&&window.innerWidth>500)
+				{
+					myswiper.params.slidesPerView=2;
+					myswiper.params.slidesOffsetBefore=0;
+					myswiper.params.slidesOffsetAfter=0;
+				}
+				else
+				{
+					myswiper.params.slidesPerView=1;
+					myswiper.params.slidesOffsetBefore=0;
+					myswiper.params.slidesOffsetAfter=0;
+				}
+			}
+			$(window).resize(function(){
+				resizeswiper();
+			})
+			resizeswiper();
+		})
+	</script>
+</body>
+</html>

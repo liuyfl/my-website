@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Concat</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/basic.css">
+	<style type="text/css">
+		.banner-sticky{
+			background-color: white;
+			box-shadow:0 0 0.9375rem 0 rgba(34, 35, 36, 0.3);
+			-webkit-box-shadow:0 0 0.9375rem 0 rgba(34, 35, 36, 0.3);
+		}
+		.banner-sticky .menu-main-navigation a,.banner-sticky .logo{
+			color:#333;
+		}
+		#map{
+			position: relative;
+			top:60px;
+			width: 100%;
+			height:500px;
+		}
+		.l-concat-info,.l-concat-addr{
+			margin-top:50px;
+			margin-bottom: 50px;
+		}
+		.l-concat-info-title{
+			font-size: 24px;
+			font-weight: bold;
+		}
+		.l-concat-info-des {
+			line-height: 24px;
+			margin-top: 15px;
+			width: 80%;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<!-- navigation -->
+		<div class="content header-banner banner-sticky">
+			<div class="container" style="position:relative;">
+				<div class="logo col-xs-4">logo</div>
+				<div class="float-menu">
+					<nav class="navigation-menu">
+						<ul class="menu-main-navigation">
+							<li class="menu-item">
+								<a class="menu-item-link" href="">Home</a>
+							</li>
+							<li class="menu-item has-sub">
+								<a class="menu-item-link" href="">Features</a>
+								<ul class="menu-item-sub-menu">
+									<li class="sub-menu-item"><a class="sub-menu-item-link">Feature1</a></li>
+									<li class="sub-menu-item"><a class="sub-menu-item-link">Feature2</a></li>
+									<li class="sub-menu-item"><a class="sub-menu-item-link">Feature3</a></li>
+									<li class="sub-menu-item"><a class="sub-menu-item-link">Feature4</a></li>
+									<li class="sub-menu-item"><a class="sub-menu-item-link">Feature5</a></li>
+								</ul>
+							</li>
+							<li class="menu-item">
+								<a class="menu-item-link" href="">Services</a>
+							</li>
+							<li class="menu-item">
+								<a class="menu-item-link" href="">Blog</a>
+							</li>
+							<li class="menu-item">
+								<a class="menu-item-link" href="">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section>
+		<div id="map"></div>
+	</section>
+	<section>
+		<div class="container" style="position:relative;top:60px;">
+			<div class="col-xs-6 l-concat-info">
+				<div class="l-concat-info-title">Information</div>
+				<div class="l-concat-info-des">
+					Lorem ipsum dolor sit amet isse potenti. Vesquam ante aliquet lacusemper elit. Cras neque nulla.
+				</div>
+			</div>
+			<div class="col-xs-6 l-concat-addr">
+				<div class="l-concat-info-title">Address</div>
+				<div class="l-concat-info-des">
+					2nd Software Park Xiamen 361008 FuJian, China<br>
+					Tel: 1234567890<br>
+					Fax: 86-123938294<br>
+					Email: test@test.com
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container" style="padding-top:50px;">
+			<div class="col-xs-4 l-footer-left">
+				<div class="l-footer-left-inner-wrap">
+					<div class="l-footer-left-logo">TestLogo</div>
+					<div class="l-footer-left-content">Lorem ipsum dolor sit met, consectetur adipiscing elit. Integer imperdiet iaculis ipsum aliquet ultricies. Sed a tincidun. </div>
+					<div class="l-footer-left-copyright">copyright 2016 TestLogo</div>
+				</div>
+			</div>
+			<div class="col-xs-4 l-footer-center">
+				<div class="l-footer-center-inner-wrap">
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">Features</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">Blog</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-xs-4 l-footer-right">
+				<div class="l-footer-right-innner-wrap">
+					<div class='l-footer-right-title'>Get in touch</div>
+					<div class="l-footer-right-addr">Xiamen FuJian 361008 Xiamen FuJian 361008,China<br>Tel: 1234567890</div>
+					<div class="l-footer-right-share">
+						<ul>
+							<li class="twitter"><a href=""><i class="fa fa-twitter"></i><i class="fa fa-twitter"></i></a></li>
+							<li class="facebook"><a href=""><i class="fa fa-facebook"></i><i class="fa fa-facebook"></i></a></li>
+							<li class="linkedin"><a href=""><i class="fa fa-linkedin"></i><i class="fa fa-linkedin"></i></a></li>
+							<li class="weibo"><a href=""><i class="fa fa-weibo"></i><i class="fa fa-weibo"></i></a></li>
+							<li class="weixin"><a href=""><i class="fa fa-weixin"></i><i class="fa fa-weixin"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=RBzrQNSPfyjV7hd5kF7MPatju5EYInWv"></script>
+	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript">
+		// 百度地图API功能
+		var map = new BMap.Map("map");    // 创建Map实例
+		map.centerAndZoom('厦门',14);
+		// map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+		map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+		// map.setCurrentCity("厦门");          // 设置地图显示的城市 此项是必须设置的
+		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+		map.setMapStyle({style:'grayscale'});
+	</script>
+</body>
+</html>
